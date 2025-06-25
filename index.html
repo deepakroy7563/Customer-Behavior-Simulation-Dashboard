@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Behavior Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <h1><i class="fas fa-chart-line"></i> Customer Behavior Dashboard</h1>
+  
+  <div class="dashboard">
+    <!-- All Users -->
+    <div class="panel" id="all-users">
+      <h2><i class="fas fa-users"></i> All Users</h2>
+      <ul id="user-list"></ul>
+    </div>
+
+    <!-- Segments -->
+    <div class="panel" id="segments">
+      <h2><i class="fas fa-tags"></i> Segments</h2>
+      <div class="segment">
+        <div class="segment-header">
+          <span><i class="fas fa-bolt"></i> Engaged Users</span>
+          <span class="segment-count" id="engaged-count">0</span>
+        </div>
+        <ul id="engaged-list"></ul>
+      </div>
+
+      <div class="segment">
+        <div class="segment-header">
+          <span><i class="fas fa-shopping-bag"></i> Buyers</span>
+          <span class="segment-count" id="buyers-count">0</span>
+        </div>
+        <ul id="buyers-list"></ul>
+      </div>
+
+      <div class="segment">
+        <div class="segment-header">
+          <span><i class="fas fa-clock"></i> Inactive Users</span>
+          <span class="segment-count" id="inactive-count">0</span>
+        </div>
+        <ul id="inactive-list"></ul>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="panel" id="timeline">
+      <h2><i class="fas fa-history"></i> User Timeline</h2>
+      <div id="timeline-details">
+        <div style="text-align: center; padding: 40px 0; color: var(--text-light);">
+          <i class="fas fa-mouse-pointer" style="font-size: 2rem; margin-bottom: 10px;"></i>
+          <p>Click on a user to view their activity timeline</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Panel -->
+    <div class="panel" id="products">
+      <h2><i class="fas fa-box-open"></i> Products</h2>
+      <ul id="product-list">
+        <!-- Product items will be inserted here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Icon -->
+  <div class="cart-icon" id="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <div class="cart-badge" id="cart-badge">0</div>
+  </div>
+
+  <!-- Shopping Cart Panel -->
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h3>Your Shopping Cart</h3>
+      <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="cart-items">
+      <!-- Cart items will be inserted here -->
+    </div>
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+  </div>
+
+  <!-- Simulation Footer -->
+  <div class="simulation-info">
+    <i class="fas fa-info-circle"></i> Simulating user activity every 3 seconds
+  </div>
+
+</body>
+</html>
